@@ -22,7 +22,7 @@ esac
 
 FILENAME=$(date +%Y-%m-%d_%H-%M-%S)_${NAME}.tar.${EXTENSION}
 
-tar ${TAR_OPTIONS} -vc${COMPRESSOR:-J}f $FILENAME -C /backup .
+tar -c -${COMPRESSOR:-J} ${TAR_OPTIONS} -f $FILENAME -C /backup .
 
 ls -lah *.tar*
 
