@@ -3,7 +3,7 @@ set -ex
 
 FILENAME=$(date +%Y-%m-%d_%H-%M-%S)_${NAME}.tar.xz
 
-tar -vcJf $FILENAME -C /backup .
+tar -vc${COMPRESSOR:-J}f $FILENAME -C /backup .
 
 ls -lah *.xz
 
