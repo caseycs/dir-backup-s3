@@ -19,3 +19,13 @@ docker run --rm \
   -e S3_PATH=bucket/directory \
   caseycs/dir-backup-s3
 ```
+
+You can specify compressor via `COMPRESSOR` variable, `J` (`xz`) is used by default:
+
+```
+Z	(De)compress using compress
+z	(De)compress using gzip
+J	(De)compress using xz
+j	(De)compress using bzip2
+a	(De)compress using lzma
+```
