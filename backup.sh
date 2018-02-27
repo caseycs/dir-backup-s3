@@ -26,4 +26,4 @@ tar -vc${COMPRESSOR:-J}f $FILENAME -C /backup .
 
 ls -lah *.tar*
 
-s3cmd put --verbose --progress $FILENAME s3://${S3_PATH}/
+s3cmd ${S3CMD_OPTIONS} --verbose --progress put $FILENAME s3://${S3_PATH}/
