@@ -23,9 +23,10 @@ docker run --rm \
 You can specify compressor via `COMPRESSOR` variable, `J` (`xz`) is used by default:
 
 ```
-Z	(De)compress using compress
 z	(De)compress using gzip
 J	(De)compress using xz
 j	(De)compress using bzip2
 a	(De)compress using lzma
 ```
+
+Hint: you can define gzip compression options via environment variable, for example: `-e GZIP=-9`
