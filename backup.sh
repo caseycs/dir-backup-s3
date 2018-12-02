@@ -29,8 +29,10 @@ if test "${EXTENSION}" != ''; then
   tar -c -${COMPRESSOR:-J} ${TAR_OPTIONS} -f $FILENAME -C /backup .
 
   ls -lah *.tar*
+
+  s3cmd ${S3CMD_OPTIONS} --verbose --progress put $FILENAME  s3://${S3_PATH}/
 else
-  FILENAME=/backup
+  cd /backup
+  s3cmd ${S3CMD_OPTIONS} --verbose --progress sync . s3://${S3_PATH}/
 fi
 
-s3cmd ${S3CMD_OPTIONS} --recursive --verbose --progress put $FILENAME s3://${S3_PATH}/
