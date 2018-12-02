@@ -19,7 +19,7 @@ docker run --rm \
   -e AWS_ACCESS_KEY=xxx \
   -e AWS_SECRET_KEY=xxx \
   -e S3_PATH=<bucket-name>/<directory-for-backups> \
-  caseycs/dir-backup-s3
+  freefly19/dir-backup-s3
 ```
 
 For DigitalOcean Spaces:
@@ -32,7 +32,7 @@ docker run --rm \
   -e AWS_SECRET_KEY=xxx \
   -e S3_PATH=<bucket-name>/<directory-for-backups> \
   -e S3CMD_OPTIONS="--host=ams3.digitaloceanspaces.com --host-bucket=$(bucket).ams3.digitaloceanspaces.com" \
-  caseycs/dir-backup-s3
+  freefly19/dir-backup-s3
 ```
 
 ## Compression options
